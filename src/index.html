@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
+    <script defer src="script.js"></script>
     <title>Country App</title>
 </head>
 <body class="bg-gray-300 flex justify-center items-center min-h-screen">
     
     <div class="w-96 bg-gray-100 p-8 rounded-lg shadow-xl">
-        <div>
+        <div class="m-b-4">
             <input class="bg-gray-100 border-b-2 border-b-gray-700 p-2 text-gray-700 tracking-wider focus:outline-none focus:ring focus:border-none focus:ring-gray-700 focus:rounded-lg focus:ring-offset-2 focus:ring-opacity-50 transition ease-linear" type="text" placeholder="Enter country name...">
             <button class="ml-2 px-7 py-3 rounded-3xl bg-indigo-600 text-gray-100 text-sm font-semibold tracking-wider hover:bg-indigo-400 active:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-offset-2 focus:ring-opacity-50 transition ease-linear">Search</button>
         </div>
+        <div id="result"></div>
     </div>
 
 </body>
