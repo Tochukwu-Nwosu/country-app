@@ -95,11 +95,11 @@ button.addEventListener('click', () => {
         .catch(() => {
             if(input.value.length === 0) {
                 result.innerHTML = `
-                    <h3 class="text-red-700 mt-4">Input Cannot Be Empty!</h3>
+                    <h3 class="text-red-700 mt-4">Input field cannot be empty!</h3>
                 `
             }else {
                 result.innerHTML = `
-                    <h3 class="text-red-700 mt-4">Enter A Valid Input (Full Name Of A Country)!</h3>
+                    <h3 class="text-red-700 mt-4">Enter the full name of a country or check connection!</h3>
                 `
             }
         })
