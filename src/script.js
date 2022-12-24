@@ -2,7 +2,7 @@ let input = document.querySelector('input');
 let button = document.querySelector('button');
 let result = document.querySelector('#result');
 
-button.addEventListener('click', () => {
+const showCountry = () => {
     let countryName = input.value;
     let url = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
 
@@ -18,12 +18,11 @@ button.addEventListener('click', () => {
                     return `${country.idd.root}${country.idd.suffixes[0]}`;
                 }
             }
-            
 
             result.innerHTML = `
                 <div class="flex flex-col justify-center items-center py-2 my-4">
                     <div class="mb-4">
-                        <img class="w-60 shadow-md" src="${country.flags.svg}" id="flag" alt="${country.name.common.toLowerCase()} flag">
+                        <img class="w-60 max-h-60 object-contain shadow-md" src="${country.flags.svg}" id="flag" alt="${country.name.common.toLowerCase()} flag">
                         <img class="hidden w-60 h-60 object-contain shadow-md" id="coat-of-arms" src="${country.coatOfArms.svg}" alt="${country.name.common.toLowerCase()} coat of arms">
                     </div>
                     <h3 class="mb-4 text-lg sm:text-xl font-semibold">${country.name.common.toUpperCase()}</h3>
@@ -73,12 +72,13 @@ button.addEventListener('click', () => {
                     <h4 class="inline-block mr-2 font-semibold">Map:</h4>
                     <span><a class="text-indigo-500 hover:text-indigo-400 rounded-lg outline-none focus:ring focus:ring-indigo-600 focus:ring-offset-2 focus:ring-opacity-50 transition ease-linear" href="${country.maps.googleMaps}" target="_blank">Map Of ${country.name.common}<span>
                 </div>
-            `
+            `;
 
             let toggleButton = document.querySelector('#toggle-btn');
             let flag = document.querySelector('#flag');
             let coatOfArms = document.querySelector('#coat-of-arms');
 
+            // toggle button event listner
             toggleButton.addEventListener('click', () => {
                 if(coatOfArms.classList.contains('hidden')) {
                     flag.classList.add('hidden');
@@ -90,17 +90,23 @@ button.addEventListener('click', () => {
                     flag.classList.remove('hidden');
                     toggleButton.textContent = 'Coat of Arms';
                 }
-            })
+            });
         })
         .catch(() => {
             if(input.value.length === 0) {
                 result.innerHTML = `
                     <h3 class="text-red-700 mt-4">Input field cannot be empty!</h3>
-                `
+                `;
             }else {
                 result.innerHTML = `
                     <h3 class="text-red-700 mt-4">Enter the full name of a country or check connection!</h3>
-                `
+                `;
             }
-        })
+        });
+}
+
+// search button & input field event listner
+button.addEventListener('click', showCountry);
+input.addEventListener('keypress', e => {
+    if(e.keyCode === 13) return showCountry();
 });

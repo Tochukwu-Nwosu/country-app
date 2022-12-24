@@ -599,6 +599,10 @@ video {
   height: 15rem;
 }
 
+.max-h-60 {
+  max-height: 15rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
