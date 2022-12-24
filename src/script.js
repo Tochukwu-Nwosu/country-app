@@ -92,5 +92,15 @@ button.addEventListener('click', () => {
                 }
             })
         })
-        .catch(error => console.error(error))
+        .catch(() => {
+            if(input.value.length === 0) {
+                result.innerHTML = `
+                    <h3 class="text-red-700 mt-4">Input Cannot Be Empty!</h3>
+                `
+            }else {
+                result.innerHTML = `
+                    <h3 class="text-red-700 mt-4">Enter A Valid Input (Full Name Of A Country)!</h3>
+                `
+            }
+        })
 });
