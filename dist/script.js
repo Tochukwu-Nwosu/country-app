@@ -42,7 +42,7 @@ const showCountry = () => {
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
                     <h4 class="inline-block mr-2 font-semibold">Population:</h4>
-                    <span>${country.population}<span>
+                    <span>${country.population.toLocaleString()}<span>
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
                     <h4 class="inline-block mr-2 font-semibold">Currency:</h4>
