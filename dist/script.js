@@ -29,7 +29,9 @@ const showCountry = () => {
                     <button class="px-5 sm:px-7 py-2 sm:py-3 rounded-3xl bg-indigo-600 text-gray-100 text-sm font-semibold tracking-wider hover:bg-indigo-400 active:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-offset-2 focus:ring-opacity-50 transition ease-linear" id="toggle-btn">Coat Of Arms</button>
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
-                    <h4 class="inline-block mr-2 font-semibold">Capital:</h4>
+                    <h4 class="inline-block mr-2 font-semibold">${
+                        country.capital.length > 1 ? "Capitals:" : "Capital:"
+                    }</h4>
                     <span>${country.capital.join(', ')}<span>
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
@@ -49,7 +51,9 @@ const showCountry = () => {
                     <span>${Object.values(country.currencies)[0]['name']} ${Object.values(country.currencies)[0]['symbol']}<span>
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
-                    <h4 class="inline-block mr-2 font-semibold">Language:</h4>
+                    <h4 class="inline-block mr-2 font-semibold">${
+                        Object.values(country.languages).length > 1 ? "Languages:" : "Language:"
+                    }</h4>
                     <span>${Object.values(country.languages).join(', ')}<span>
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
