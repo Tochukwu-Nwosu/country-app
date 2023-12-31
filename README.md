@@ -6,8 +6,8 @@ Details provided are:
  - Flag
  - Coat of Arms
  - Capital
- - Countinent
- - Subregion
+ - Continent
+ - Sub region
  - Population
  - Currency
  - Language

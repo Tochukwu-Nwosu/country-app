@@ -35,11 +35,11 @@ const showCountry = () => {
                     <span>${country.capital.join(', ')}<span>
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
-                    <h4 class="inline-block mr-2 font-semibold">Countinent:</h4>
+                    <h4 class="inline-block mr-2 font-semibold">Continent:</h4>
                     <span>${country.region}<span>
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
-                    <h4 class="inline-block mr-2 font-semibold">Subregion:</h4>
+                    <h4 class="inline-block mr-2 font-semibold">Sub region:</h4>
                     <span>${country.subregion}<span>
                 </div>
                 <div class="border-b-2 border-gray-300 py-2 sm:text-lg">
