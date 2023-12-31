@@ -26,5 +26,5 @@ This project was developed using:
 ## Site
 [country-app](https://tk-country-app.vercel.app/)
 
-## Contribution
+## Contributor
 This project was developed by [Tochukwu Nwosu](https://github.com/Tochukwu-Nwosu)
