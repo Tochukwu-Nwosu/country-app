@@ -1,6 +1,9 @@
 let input = document.querySelector('input');
 let button = document.querySelector('button');
 let result = document.querySelector('#result');
+let year = new Date().getFullYear().toString();
+
+document.getElementById('date').innerHTML = year;
 
 const showCountry = () => {
     let countryName = input.value;
